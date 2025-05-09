@@ -25,14 +25,14 @@ require "settings/init.php";
 <div class="container">
     <div class="row g-3">
         <?php
-        $produkter = $db->sql("SELECT * FROM produkter");
-        foreach($produkter as $produkt) {
+        $income = $db->sql("SELECT * FROM income");
+        foreach($income as $incom) {
             ?>
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
                         <?php
-                        echo $produkt->prodNavn;
+                        echo $incom->inId;
                         ?>
                     </div>
                     <div class="card-body">
