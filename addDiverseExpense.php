@@ -8,12 +8,12 @@ require "settings/init.php";
 if(!empty($_POST["data"])) {
     $data = $_POST["data"];
 
-    $sql = "INSERT INTO income (inAmount, inName) VALUES(:inAmount, :inName)";
-    $bind = [":inAmount" => $data["inAmount"], ":inName" => $data["inName"]];
+    $sql = "INSERT INTO expense (exAmount, exName, exDate) VALUES(:exAmount, :exName, :exDate)";
+    $bind = [":inAmount" => $data["inAmount"], ":exName" => $data["exName"], ":exDate" => $data["exName"]];
 
     $db->sql($sql, $bind, false);
 
-    echo "Indkomsten er nu tilføjet. <a href='addIncome.php'>Tilføj en anden indkomst</a> Eller <a href='index.php'>Gå tilbage</a> ";
+    echo "Huslejen er nu tilføjet. <a href='index.php'>Gå tilbage til forsiden</a> ";
     exit;
 
 }
@@ -24,7 +24,7 @@ if(!empty($_POST["data"])) {
 <head>
     <meta charset="utf-8">
 
-    <title>Tilføj Indkomst / Saldo</title>
+    <title>Tilføj Husleje / Saldo</title>
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
@@ -48,22 +48,22 @@ if(!empty($_POST["data"])) {
 
 <!-- Herunder kan du finde formularen til at tilføje ens indkomst. -->
 <div class="container mt-3">
-    <form action="addIncome.php" method="post">
+    <form action="addRentExpense.php" method="post">
         <div class="row g-3">
             <div class="col-12 col-md-4">
-                <label for="inAmount" class="form-label">Indkomst</label>
-                <input type="number" step="0.01" class="form-control" id="inAmount" name="data[inAmount]" placeholder="Indkomst" value="">
+                <label for="exAmount" class="form-label">Husleje Pris</label>
+                <input type="number" step="0.01" class="form-control" id="exAmount" name="data[exAmount]" placeholder="Skriv din husleje her" value="">
             </div>
             <div class="col-12 col-md-4">
-                <label for="inName" class="form-label">Indkomst navn</label>
-                <input type="text" class="form-control" id="inName" name="data[inName]" placeholder="F.eks. løn, SU eller andet" value="">
+                <label for="exName" class="form-label">Husleje Navn</label>
+                <input type="text" class="form-control" id="exName" name="data[exName]" placeholder="Husleje" value="Husleje" disabled>
             </div>
             <div class="col-12 col-md-4">
-                <label for="inDate" class="form-label">Vælg Dato</label>
-                <input type="date" class="form-control" id="inDate" name="data[inDate]" placeholder="Vælg Dato" value="">
+                <label for="exDate" class="form-label">Vælg Dato</label>
+                <input type="date" class="form-control" id="exDate" name="data[exDate]" placeholder="Vælg Dato" value="">
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Tilføj Indkomst</button>
+                <button type="submit" class="btn btn-primary">Tilføj Husleje</button>
             </div>
         </div>
     </form>

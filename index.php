@@ -22,7 +22,7 @@ require "settings/init.php";
 <!-- Navbar -->
 <nav class="navbar bg-body-tertiary">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.php">
             <img src="" alt="Saldo Logo">
         </a>
     </div>
@@ -69,25 +69,47 @@ require "settings/init.php";
             <p>Herunder kan du tilføje dine udgifter</p>
         </div>
 
-        <div class="col-12 col-md-6 d-flex flex-column align-items-md-end align-items-center mb-4 mb-md-5">
-            <h3>Husleje</h3>
-            <img src="billeder/husleje.png" alt="Husleje billede" class="img-fluid rounded shadow">
+        <div class="col-6 d-flex justify-content-md-end justify-content-center mb-4 mb-md-4">
+            <div class="position-relative text-center">
+                <img src="images/husleje150x150.png" alt="Husleje billede" class="img-fluid rounded shadow">
+                <!-- Mørk overlay -->
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
+                <!-- Tekst foran billedet -->
+                <a href="addRentExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Husleje</h3></a>
+            </div>
         </div>
 
-        <div class="col-12 col-md-6 d-flex flex-column align-items-md-start align-items-center mb-4 mb-md-5">
-            <h3>Mobilabonnoment</h3>
-            <img src="billeder/internet.png" alt="Internet billede" class="img-fluid rounded shadow">
+        <div class="col-6 d-flex justify-content-md-start justify-content-center mb-4 mb-md-4">
+            <div class="position-relative text-center">
+                <img src="images/husleje150x150.png" alt="Husleje billede" class="img-fluid rounded shadow">
+                <!-- Mørk overlay -->
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
+                <!-- Tekst foran billedet -->
+                <a href="addStreamingExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Streaming</h3></a>
+            </div>
         </div>
 
-        <div class="col-12 col-md-6 d-flex flex-column align-items-md-end align-items-center mb-4 mb-md-5">
-            <h3>Streaming</h3>
-            <img src="billeder/mobil.png" alt="Mobil billede" class="img-fluid rounded shadow">
+        <div class="col-6 d-flex justify-content-md-end justify-content-center mb-4 mb-md-5">
+            <div class="position-relative text-center">
+                <img src="images/husleje150x150.png" alt="Husleje billede" class="img-fluid rounded shadow">
+                <!-- Mørk overlay -->
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
+                <!-- Tekst foran billedet -->
+                <a href="addMobileExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Mobil</h3></a>
+            </div>
         </div>
 
-        <div class="col-12 col-md-6 d-flex flex-column align-items-md-start align-items-center mb-4 mb-md-5">
-            <h3>Dagligvarer</h3>
-            <img src="billeder/diverse.png" alt="Diverse billede" class="img-fluid rounded shadow">
+        <div class="col-6 d-flex justify-content-md-start justify-content-center mb-4 mb-md-5">
+            <div class="position-relative text-center">
+                <img src="images/husleje150x150.png" alt="Husleje billede" class="img-fluid rounded shadow">
+                <!-- Mørk overlay -->
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
+                <!-- Tekst foran billedet -->
+                <a href="addDiverseExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Diverse</h3></a>
+            </div>
         </div>
+
+
     </div>
 </div>
 
