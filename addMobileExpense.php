@@ -8,12 +8,12 @@ require "settings/init.php";
 if(!empty($_POST["data"])) {
     $data = $_POST["data"];
 
-    $sql = "INSERT INTO expense (exAmount, exName, exDate) VALUES(:exAmount, :exName, :exDate)";
-    $bind = [":inAmount" => $data["inAmount"], ":exName" => $data["exName"], ":exDate" => $data["exName"]];
+    $sql = "INSERT INTO expenses (exAmount, exName, exDate) VALUES(:exAmount, :exName, :exDate)";
+    $bind = [":exAmount" => $data["exAmount"], ":exName" => $data["exName"], ":exDate" => $data["exDate"]];
 
     $db->sql($sql, $bind, false);
 
-    echo "Huslejen er nu tilføjet. <a href='index.php'>Gå tilbage til forsiden</a> ";
+    echo "Mobilabonnementet er nu tilføjet. <a href='addMobileExpense.php'>Tilføj et andet mobilabonnement</a> Eller <a href='index.php'>Gå tilbage til forsiden</a> ";
     exit;
 
 }
@@ -24,7 +24,7 @@ if(!empty($_POST["data"])) {
 <head>
     <meta charset="utf-8">
 
-    <title>Tilføj Husleje / Saldo</title>
+    <title>Tilføj mobilabonnement / Saldo</title>
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
@@ -37,7 +37,7 @@ if(!empty($_POST["data"])) {
 
 <body>
 
-<!-- Her har du en navbar. Det er det, som viser logoet oppe i højre -->
+<!-- Her har du en navbar. Det er det, som viser logoet oppe i venstre -->
 <nav class="navbar bg-body-tertiary">
     <div class="container">
         <a class="navbar-brand" href="index.php">
@@ -48,22 +48,22 @@ if(!empty($_POST["data"])) {
 
 <!-- Herunder kan du finde formularen til at tilføje ens indkomst. -->
 <div class="container mt-3">
-    <form action="addRentExpense.php" method="post">
+    <form action="addMobileExpense.php" method="post">
         <div class="row g-3">
             <div class="col-12 col-md-4">
-                <label for="exAmount" class="form-label">Husleje Pris</label>
-                <input type="number" step="0.01" class="form-control" id="exAmount" name="data[exAmount]" placeholder="Skriv din husleje her" value="">
+                <label for="exAmount" class="form-label">Pris</label>
+                <input type="number" step="0.01" class="form-control" id="exAmount" name="data[exAmount]" placeholder="Skriv prisen på abonnementet her" value="">
             </div>
             <div class="col-12 col-md-4">
-                <label for="exName" class="form-label">Husleje Navn</label>
-                <input type="text" class="form-control" id="exName" name="data[exName]" placeholder="Husleje" value="Husleje" disabled>
+                <label for="exName" class="form-label">Abonnement</label>
+                <input type="text" class="form-control" id="exName" name="data[exName]" placeholder="F.eks. Telia eller mobilabonnement" value="">
             </div>
             <div class="col-12 col-md-4">
                 <label for="exDate" class="form-label">Vælg Dato</label>
                 <input type="date" class="form-control" id="exDate" name="data[exDate]" placeholder="Vælg Dato" value="">
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Tilføj Husleje</button>
+                <button type="submit" class="btn btn-primary">Tilføj abonnement</button>
             </div>
         </div>
     </form>

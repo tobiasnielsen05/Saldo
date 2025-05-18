@@ -9,7 +9,7 @@ if(!empty($_POST["data"])) {
     $data = $_POST["data"];
 
     $sql = "INSERT INTO expense (exAmount, exName, exDate) VALUES(:exAmount, :exName, :exDate)";
-    $bind = [":inAmount" => $data["inAmount"], ":exName" => $data["exName"], ":exDate" => $data["exName"]];
+    $bind = [":inAmount" => $data["inAmount"], ":exName" => $data["exName"], ":exDate" => $data["exDate"]];
 
     $db->sql($sql, $bind, false);
 
