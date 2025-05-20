@@ -81,7 +81,7 @@ require "settings/init.php";
 
         <div class="col-6 d-flex justify-content-md-start justify-content-center mb-4 mb-md-4">
             <div class="position-relative text-center">
-                <img src="images/husleje150x150.png" alt="Husleje billede" class="img-fluid rounded shadow">
+                <img src="images/streaming150x150.webp" alt="Streaming billede" class="img-fluid rounded shadow">
                 <!-- Mørk overlay -->
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
                 <!-- Tekst foran billedet -->
@@ -91,7 +91,7 @@ require "settings/init.php";
 
         <div class="col-6 d-flex justify-content-md-end justify-content-center mb-4 mb-md-5">
             <div class="position-relative text-center">
-                <img src="images/husleje150x150.png" alt="Husleje billede" class="img-fluid rounded shadow">
+                <img src="images/mobile150x150.webp" alt="Mobil billede" class="img-fluid rounded shadow">
                 <!-- Mørk overlay -->
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
                 <!-- Tekst foran billedet -->
@@ -101,7 +101,7 @@ require "settings/init.php";
 
         <div class="col-6 d-flex justify-content-md-start justify-content-center mb-4 mb-md-5">
             <div class="position-relative text-center">
-                <img src="images/husleje150x150.png" alt="Husleje billede" class="img-fluid rounded shadow">
+                <img src="images/diverse150x150.webp" alt="Diverse billede" class="img-fluid rounded shadow">
                 <!-- Mørk overlay -->
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
                 <!-- Tekst foran billedet -->
