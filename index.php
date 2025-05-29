@@ -17,13 +17,13 @@ require "settings/init.php";
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="bg-primary">
 
 <!-- Navbar -->
-<nav class="navbar bg-body-tertiary">
-    <div class="container">
-        <a class="navbar-brand" href="index.php">
-            <img src="" alt="Saldo Logo">
+<nav class="navbar">
+    <div class="container d-flex justify-content-center">
+        <a class="navbar" href="index.php">
+            <img class="w-100 img-fluid" src="images/saldologo150x150.webp" alt="Saldo Logo">
         </a>
     </div>
 </nav>
@@ -31,9 +31,6 @@ require "settings/init.php";
 <!-- Indkomst-sektion -->
 <div class="container mt-4">
     <div class="row g-2">
-        <div class="col-12 d-flex justify-content-center">
-            <h1>Indkomst:</h1>
-        </div>
 
         <?php
         // Hent den samlede indkomst fra databasen
@@ -44,17 +41,25 @@ require "settings/init.php";
         $income = number_format($inAmount, 0, ',', '.');
         ?>
 
-        <div class="col-12 d-flex justify-content-center">
-            <div class="bg-dark-subtle p-4 rounded">
-                <p class="fs-2 fw-bold mb-0 text-success"><?php echo $income; ?>,- DKK</p>
+        <div class="col-9 col-md-3 mx-auto">
+            <!-- Indkomst og Udgifter-boks -->
+            <div class="card bg-light mb-3 mx-auto">
+                <div class="card-header fw-bold">Indkomst:</div>
+                <div class="card-body">
+                    <p class="fs-1 fw-bold mb-0 text-center text-success"><?php echo $income; ?>,- DKK</p>
+                </div>
             </div>
         </div>
+    </div>
+</div>
 
-        <div class="col-12 col-md-6 mt-3 mt-md-4 d-flex justify-content-md-end justify-content-center">
-            <a class="btn btn-primary" href="addIncome.php" role="button">Tilføj Indkomst</a>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 mt-md-4 d-flex justify-content-md-end justify-content-center">
+            <a class="btn btn-knapfarve text-secondary fw-bold" href="addIncome.php" role="button">Tilføj Indkomst</a>
         </div>
-        <div class="col-12 col-md-6 mt-md-4 d-flex justify-content-md-start justify-content-center">
-            <a class="btn btn-primary" href="#" role="button">Ret Indkomst</a>
+        <div class="col-12 col-md-6 mt-3 mt-md-4 d-flex justify-content-md-start justify-content-center">
+            <a class="btn btn-knapfarve text-secondary fw-bold" href="#" role="button">Ret Indkomst</a>
         </div>
     </div>
 </div>
@@ -75,7 +80,7 @@ require "settings/init.php";
                 <!-- Mørk overlay -->
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
                 <!-- Tekst foran billedet -->
-                <a href="addRentExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Husleje</h3></a>
+                <a href="addRentExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fs-2 fw-bold m-0">Husleje</h3></a>
             </div>
         </div>
 
@@ -85,7 +90,7 @@ require "settings/init.php";
                 <!-- Mørk overlay -->
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
                 <!-- Tekst foran billedet -->
-                <a href="addStreamingExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Streaming</h3></a>
+                <a href="addStreamingExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fs-2 fw-bold m-0">Streaming</h3></a>
             </div>
         </div>
 
@@ -95,7 +100,7 @@ require "settings/init.php";
                 <!-- Mørk overlay -->
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
                 <!-- Tekst foran billedet -->
-                <a href="addMobileExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Mobil</h3></a>
+                <a href="addMobileExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fs-2 fw-bold m-0">Mobil</h3></a>
             </div>
         </div>
 
@@ -105,10 +110,13 @@ require "settings/init.php";
                 <!-- Mørk overlay -->
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
                 <!-- Tekst foran billedet -->
-                <a href="addDiverseExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Diverse</h3></a>
+                <a href="addDiverseExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fs-2 fw-bold m-0">Diverse</h3></a>
             </div>
         </div>
 
+        <div class="col-12 text-center mb-4">
+            <a class="btn btn-knapfarve text-secondary fw-bold p-2" href="expenseList.php">Vis alle udgifter</a>
+        </div>
 
     </div>
 </div>
