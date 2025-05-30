@@ -68,50 +68,58 @@ require "settings/init.php";
 <div class="container">
     <div class="row">
         <div class="col-12 mt-5 d-flex justify-content-center">
-            <h1>Udgifter:</h1>
+            <h1 class="text-secondary fw-bold">Udgifter:</h1>
         </div>
         <div class="col-12 mt-0 d-flex justify-content-center">
-            <p>Herunder kan du tilføje dine udgifter</p>
+            <p class="text-secondary">Herunder kan du tilføje dine udgifter</p>
         </div>
 
         <div class="col-6 d-flex justify-content-md-end justify-content-center mb-4 mb-md-4">
+            <a href="addRentExpense.php">
             <div class="position-relative text-center">
                 <img src="images/husleje150x150.png" alt="Husleje billede" class="img-fluid rounded shadow">
                 <!-- Mørk overlay -->
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
                 <!-- Tekst foran billedet -->
-                <a href="addRentExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fs-2 fw-bold m-0">Husleje</h3></a>
+                <h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Husleje</h3>
             </div>
+            </a>
         </div>
 
         <div class="col-6 d-flex justify-content-md-start justify-content-center mb-4 mb-md-4">
+            <a href="addStreamingExpense.php">
             <div class="position-relative text-center">
                 <img src="images/streaming150x150.webp" alt="Streaming billede" class="img-fluid rounded shadow">
                 <!-- Mørk overlay -->
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
                 <!-- Tekst foran billedet -->
-                <a href="addStreamingExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fs-2 fw-bold m-0">Streaming</h3></a>
+                <h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Streaming</h3>
             </div>
+            </a>
         </div>
 
         <div class="col-6 d-flex justify-content-md-end justify-content-center mb-4 mb-md-5">
+            <a href="addMobileExpense.php">
             <div class="position-relative text-center">
                 <img src="images/mobile150x150.webp" alt="Mobil billede" class="img-fluid rounded shadow">
                 <!-- Mørk overlay -->
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
                 <!-- Tekst foran billedet -->
-                <a href="addMobileExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fs-2 fw-bold m-0">Mobil</h3></a>
+                <h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Mobil</h3>
             </div>
+            </a>
         </div>
 
         <div class="col-6 d-flex justify-content-md-start justify-content-center mb-4 mb-md-5">
+            <a href="addDiverseExpense.php">
             <div class="position-relative text-center">
                 <img src="images/diverse150x150.webp" alt="Diverse billede" class="img-fluid rounded shadow">
                 <!-- Mørk overlay -->
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
                 <!-- Tekst foran billedet -->
-                <a href="addDiverseExpense.php"><h3 class="position-absolute top-50 start-50 translate-middle text-white fs-2 fw-bold m-0">Diverse</h3></a>
+                <h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Diverse</h3>
             </div>
+            </a>
         </div>
 
         <div class="col-12 text-center mb-4">

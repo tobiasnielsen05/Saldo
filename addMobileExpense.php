@@ -51,7 +51,7 @@ if(!empty($_POST["data"])) {
     <form action="addMobileExpense.php" method="post">
         <div class="row g-3 justify-content-center">
             <div class="col-10 col-md-7">
-                <label for="exAmount" class="form-label text-secondary fw-bold">Pris:</label>
+                <label for="exAmount" class="form-label text-secondary fw-bold">Beløb:</label>
                 <input type="number" step="0.01" class="form-control" id="exAmount" name="data[exAmount]" placeholder="Skriv prisen på abonnementet her" value="">
             </div>
             <div class="col-10 col-md-7">
