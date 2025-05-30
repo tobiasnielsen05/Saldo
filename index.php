@@ -78,7 +78,7 @@ if ($available > 1000) {
             </div>
         </div>
         <div class="col-12 mt-4 text-center">
-            <a class="btn btn-knapfarve text-secondary fw-bold p-2" href="budgetOverview.php">Tilføj indkomst/udgifter</a>
+            <a class="btn btn-knapfarve text-secondary fw-bold p-2" href="budgetOverview.php">Gå til oversigt</a>
         </div>
     </div>
 </div>

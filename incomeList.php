@@ -56,7 +56,7 @@ $income = $db->sql("SELECT * FROM income ORDER BY inDate DESC");
                             <td class="text-nowrap"><?php echo number_format($in->inAmount, 2, ',', '.'); ?>,-</td>
                             <td class="text-nowrap"><?php echo date("d-m-Y", strtotime($in->inDate)); ?></td>
                             <td class="text-center">
-                                <a href="expenseUpdate.php?exId=<?php echo $in->inId; ?>" class="text-warning fs-3">
+                                <a href="incomeUpdate.php?inId=<?php echo $in->inId; ?>" class="text-warning fs-3">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
                             </td>
