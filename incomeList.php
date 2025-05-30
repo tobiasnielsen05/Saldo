@@ -6,7 +6,7 @@
 require "settings/init.php";
 
 // Hent alle udgifter + navn på typen (JOIN)
-$expenses = $db->sql("SELECT * FROM expenses LEFT JOIN expense_types ON exName = extName ORDER BY exDate DESC");
+$income = $db->sql("SELECT * FROM income ORDER BY inDate DESC");
 ?>
 <!DOCTYPE html>
 <html lang="da">
@@ -49,19 +49,19 @@ $expenses = $db->sql("SELECT * FROM expenses LEFT JOIN expense_types ON exName =
                     </thead>
                     <tbody>
                     <?php
-                    foreach ($expenses as $expense) {
+                    foreach ($income as $in) {
                         ?>
                         <tr>
-                            <td><?php echo $expense->exName ?? 'Ukendt'; ?></td>
-                            <td class="text-nowrap"><?php echo number_format($expense->exAmount, 2, ',', '.'); ?>,-</td>
-                            <td class="text-nowrap"><?php echo date("d-m-Y", strtotime($expense->exDate)); ?></td>
+                            <td><?php echo $in->inName ?? 'Ukendt'; ?></td>
+                            <td class="text-nowrap"><?php echo number_format($in->inAmount, 2, ',', '.'); ?>,-</td>
+                            <td class="text-nowrap"><?php echo date("d-m-Y", strtotime($in->inDate)); ?></td>
                             <td class="text-center">
-                                <a href="expenseUpdate.php?exId=<?php echo $expense->exId; ?>" class="text-warning fs-3">
+                                <a href="expenseUpdate.php?exId=<?php echo $in->inId; ?>" class="text-warning fs-3">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
                             </td>
                             <td class="text-center fs-3">
-                                <a href="expenseDelete.php?exId=<?php echo $expense->exId; ?>" class="text-danger">
+                                <a href="expenseDelete.php?exId=<?php echo $in->inId; ?>" class="text-danger">
                                     <i class="bi bi-trash-fill"></i>
                                 </a>
                             </td>
