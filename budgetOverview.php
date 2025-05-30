@@ -22,8 +22,8 @@ require "settings/init.php";
 <!-- Navbar -->
 <nav class="navbar">
     <div class="container d-flex justify-content-center">
-        <a class="navbar" href="index.php">
-            <img class="w-100 img-fluid" src="images/saldologo150x150.webp" alt="Saldo Logo">
+        <a class="navbar d-flex justify-content-center" href="index.php">
+            <img class="w-75 img-fluid" src="images/saldologo150x150.webp" alt="Saldo Logo">
         </a>
     </div>
 </nav>
@@ -79,7 +79,7 @@ require "settings/init.php";
                 <div class="position-relative text-center">
                     <img src="images/husleje150x150.png" alt="Husleje billede" class="img-fluid rounded shadow">
                     <!-- Mørk overlay -->
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-secondary bg-opacity-25 rounded"></div>
                     <!-- Tekst foran billedet -->
                     <h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Husleje</h3>
                 </div>
@@ -91,7 +91,7 @@ require "settings/init.php";
                 <div class="position-relative text-center">
                     <img src="images/streaming150x150.webp" alt="Streaming billede" class="img-fluid rounded shadow">
                     <!-- Mørk overlay -->
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-secondary bg-opacity-25 rounded"></div>
                     <!-- Tekst foran billedet -->
                     <h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Streaming</h3>
                 </div>
@@ -103,7 +103,7 @@ require "settings/init.php";
                 <div class="position-relative text-center">
                     <img src="images/mobile150x150.webp" alt="Mobil billede" class="img-fluid rounded shadow">
                     <!-- Mørk overlay -->
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-secondary bg-opacity-25 rounded"></div>
                     <!-- Tekst foran billedet -->
                     <h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Mobil</h3>
                 </div>
@@ -115,7 +115,7 @@ require "settings/init.php";
                 <div class="position-relative text-center">
                     <img src="images/diverse150x150.webp" alt="Diverse billede" class="img-fluid rounded shadow">
                     <!-- Mørk overlay -->
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded"></div>
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-secondary bg-opacity-25 rounded"></div>
                     <!-- Tekst foran billedet -->
                     <h3 class="position-absolute top-50 start-50 translate-middle text-white fw-bold m-0">Diverse</h3>
                 </div>

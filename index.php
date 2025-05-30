@@ -20,10 +20,10 @@ require "settings/init.php";
 <body class="bg-primary">
 
 <!-- Navbar -->
-<nav class="navbar bg-primary">
-    <div class="container">
-        <a class="navbar-brand" href="index.php">
-            <img class="w-50" src="images/saldologo150x150.webp" alt="Saldo Logo">
+<nav class="navbar">
+    <div class="container d-flex justify-content-center">
+        <a class="navbar d-flex justify-content-center" href="index.php">
+            <img class="w-75 img-fluid" src="images/saldologo150x150.webp" alt="Saldo Logo">
         </a>
     </div>
 </nav>
@@ -34,20 +34,23 @@ $incomeTotal = $db->sql("SELECT SUM(inAmount) AS total FROM income")[0]->total ?
 $expenseTotal = $db->sql("SELECT SUM(exAmount) AS total FROM expenses")[0]->total ?? 0;
 $available = $incomeTotal - $expenseTotal;
 
-// Standard værdier
-$cardClass = "bg-danger";
-$statusText = "🚨 Overforbrug!";
-$statusIcon = "🚨";
-
 // Farve og tekst baseret på beløb
 if ($available > 1000) {
     $cardClass = "bg-success";
     $statusText = "💰 God økonomi";
     $statusIcon = "💰";
-} elseif ($available >= 500) {
+} else if ($available >= 500) {
     $cardClass = "bg-warning";
     $statusText = "⚠️ Vær opmærksom";
     $statusIcon = "⚠️";
+} else if($available > 0) {
+    $cardClass = "bg-danger";
+    $statusText = "🚨 Overforbrug!";
+    $statusIcon = "🚨";
+} else if($available == 0) {
+    $cardClass = "bg-dark opacity-75";
+    $statusText = "";
+    $statusIcon = "";
 }
 ?>
 
