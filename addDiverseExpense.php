@@ -13,12 +13,11 @@ if(!empty($_POST["data"])) {
 
     $db->sql($sql, $bind, false);
 
-    echo "Udgiften er nu tilføjet. <a href='addDiverseExpense.php'>Tilføj en anden udgift</a> Eller <a href='index.php'>Gå tilbage til forsiden</a> ";
+    echo "Udgiften er nu tilføjet. <a href='addDiverseExpense.php'>Tilføj en anden udgift</a> Eller <a href='budgetOverview.php'>Gå tilbage til forsiden</a> ";
     exit;
-
 }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="da">
 <head>

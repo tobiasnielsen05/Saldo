@@ -13,7 +13,7 @@ if(!empty($_POST["data"])) {
 
     $db->sql($sql, $bind, false);
 
-    echo "Streamingtjenesten er nu tilføjet. <a href='addStreamingExpense.php'>Tilføj en anden streamingtjeneste</a> Eller <a href='index.php'>Gå tilbage</a>";
+    echo "Streamingtjenesten er nu tilføjet. <a href='addStreamingExpense.php'>Tilføj en anden streamingtjeneste</a> Eller <a href='budgetOverview.php'>Gå tilbage</a>";
     exit;
 
 }

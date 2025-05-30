@@ -13,7 +13,7 @@ if(!empty($_POST["data"])) {
 
     $db->sql($sql, $bind, false);
 
-    echo "Indkomsten er nu tilføjet. <a href='addIncome.php'>Tilføj en anden indkomst</a> Eller <a href='index.php'>Gå tilbage</a> ";
+    echo "Indkomsten er nu tilføjet. <a href='addIncome.php'>Tilføj en anden indkomst</a> Eller <a href='budgetOverview.php'>Gå tilbage</a> ";
     exit;
 
 }

@@ -16,7 +16,7 @@ $db->sql($sql, [":inId" => $inId]);
 <html lang="da">
 <head>
     <meta charset="utf-8">
-    <title>Forside / Saldo</title>
+    <title>Fjern indkomst / Saldo</title>
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">

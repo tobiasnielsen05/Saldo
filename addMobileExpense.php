@@ -13,7 +13,7 @@ if(!empty($_POST["data"])) {
 
     $db->sql($sql, $bind, false);
 
-    echo "Mobilabonnementet er nu tilføjet. <a href='addMobileExpense.php'>Tilføj et andet mobilabonnement</a> Eller <a href='index.php'>Gå tilbage til forsiden</a> ";
+    echo "Mobilabonnementet er nu tilføjet. <a href='addMobileExpense.php'>Tilføj et andet mobilabonnement</a> Eller <a href='budgetOverview.php'>Gå tilbage til forsiden</a> ";
     exit;
 
 }

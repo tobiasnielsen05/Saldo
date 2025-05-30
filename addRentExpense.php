@@ -13,7 +13,7 @@ if(!empty($_POST["data"])) {
 
     $db->sql($sql, $bind, false);
 
-    echo "Huslejen er nu tilføjet. <a href='index.php'>Gå tilbage til forsiden</a> ";
+    echo "Huslejen er nu tilføjet. <a href='budgetOverview.php'>Gå tilbage</a> ";
     exit;
 
 }
