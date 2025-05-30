@@ -35,10 +35,10 @@ if(!empty($_POST["data"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="bg-primary">
 
 <!-- Her har du en navbar. Det er det, som viser logoet oppe i højre -->
-<nav class="navbar bg-body-tertiary">
+<nav class="navbar">
     <div class="container">
         <a class="navbar-brand" href="index.php">
             <img src="" alt="Saldo Logo">
@@ -49,21 +49,21 @@ if(!empty($_POST["data"])) {
 <!-- Herunder kan du finde formularen til at tilføje ens indkomst. -->
 <div class="container mt-3">
     <form action="addRentExpense.php" method="post">
-        <div class="row g-3">
-            <div class="col-12 col-md-4">
-                <label for="exAmount" class="form-label">Husleje Pris</label>
+        <div class="row g-3 justify-content-center">
+            <div class="col-10 col-md-7">
+                <label for="exAmount" class="form-label text-secondary fw-bold">Beløb:</label>
                 <input type="number" step="0.01" class="form-control" id="exAmount" name="data[exAmount]" placeholder="Skriv din husleje her" value="">
             </div>
-            <div class="col-12 col-md-4">
-                <label for="exName" class="form-label">Husleje Navn</label>
-                <input type="text" class="form-control" id="exName" name="data[exName]" placeholder="Husleje" value="Husleje" disabled>
+            <div class="col-10 col-md-7">
+                <label for="exName" class="form-label text-secondary fw-bold mt-2">Navn:</label>
+                <input type="text" class="form-control" id="exName" name="data[exName]" placeholder="Husleje" value="Husleje">
             </div>
-            <div class="col-12 col-md-4">
-                <label for="exDate" class="form-label">Vælg Dato</label>
-                <input type="date" class="form-control" id="exDate" name="data[exDate]" placeholder="Vælg Dato" value="">
+            <div class="col-10 col-md-7">
+                <label for="exDate" class="form-label text-secondary fw-bold mt-2">Vælg Dato:</label>
+                <input type="date" class="form-control" id="exDate" name="data[exDate]" placeholder="" value="">
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Tilføj Husleje</button>
+            <div class="col-12 mt-4 d-flex justify-content-center">
+                <button type="submit" class="btn btn-knapfarve text-secondary fw-bold">Tilføj Husleje</button>
             </div>
         </div>
     </form>

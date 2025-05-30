@@ -27,7 +27,7 @@ $expenses = $db->sql("SELECT * FROM expenses LEFT JOIN expense_types ON exName =
 <nav class="navbar">
     <div class="container d-flex justify-content-center">
         <a class="navbar" href="index.php">
-            <img class="w-100 img-fluid" src="images/saldologo150x150.webp" alt="Saldo Logo">
+            <img class="w-75 img-fluid" src="images/saldologo150x150.webp" alt="Saldo Logo">
         </a>
     </div>
 </nav>

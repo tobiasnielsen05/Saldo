@@ -34,10 +34,10 @@ if(!empty($_POST["data"])) {
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body class="bg-primary">
 
 <!-- Her har du en navbar. Det er det, som viser logoet oppe i højre -->
-<nav class="navbar bg-body-tertiary">
+<nav class="navbar">
     <div class="container">
         <a class="navbar-brand" href="index.php">
             <img src="" alt="Saldo Logo">
@@ -47,12 +47,13 @@ if(!empty($_POST["data"])) {
 
 <!-- Herunder kan du finde formularen til at tilføje ens indkomst. -->
 <div class="container mt-3">
-    <div class="row">
-        <form method="post" action="addStreamingExpense.php">
-            <div class="col-12 col-md-4">
+    <form method="post" action="addStreamingExpense.php">
+    <div class="row justify-content-center">
+            <!-- StreamingTjenesterne -->
+            <div class="col-10 col-md-7">
                 <!-- Dropdown med faste platforme -->
-                <label for="expense_type">Vælg streamingtjeneste:</label>
-                <select name="data[exName]" id="exName" class="form-select" onchange="fillFixedPrice()">
+                <label class="text-secondary fw-bold mb-1" for="expense_type">Vælg streamingtjeneste:</label>
+                <select name="data[exName]" id="exName" class="form-select text-secondary" onchange="fillFixedPrice()">
                     <option value="">Klik her for at vælge</option>
                     <?php
                     $fixedExpenses = $db->sql("SELECT * FROM expense_types");
@@ -66,24 +67,23 @@ if(!empty($_POST["data"])) {
                 </select>
             </div>
 
-
-            <div class="col-12 col-md-4">
-                <!-- Beløb -->
-                <label for="exAmount" class="mt-2">Beløb (kr):</label>
-                <input type="text" name="data[exAmount]" id="exAmount" class="form-control">
+            <!-- Beløb -->
+            <div class="col-10 col-md-7">
+                <label for="exAmount" class="text-secondary fw-bold mb-1 mt-3">Beløb (kr):</label>
+                <input type="number" name="data[exAmount]" id="exAmount" class="form-control">
             </div>
 
-
-            <div class="col-12 col-md-4">
-                <label for="exDate" class="form-label">Vælg Dato</label>
-                <input type="date" class="form-control" id="exDate" name="data[exDate]" placeholder="Vælg Dato" value="">
+            <!-- Dato -->
+            <div class="col-10 col-md-7">
+                <label for="exDate" class="form-label text-secondary fw-bold mb-1 mt-3">Vælg Dato</label>
+                <input type="date" class="form-control" id="exDate" name="data[exDate]" placeholder="" value="">
             </div>
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary mt-3">Tilføj udgift</button>
-            </div>
-
         </form>
+
+        <!-- Tilføj knappen -->
+        <div class="col-12 d-flex justify-content-center mt-3">
+            <button type="submit" class="btn btn-knapfarve text-secondary fw-bold mt-3">Tilføj udgift</button>
+        </div>
     </div>
 
 </div>

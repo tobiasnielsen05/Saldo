@@ -35,10 +35,10 @@ if(!empty($_POST["data"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="bg-primary">
 
 <!-- Her har du en navbar. Det er det, som viser logoet oppe i venstre -->
-<nav class="navbar bg-body-tertiary">
+<nav class="navbar">
     <div class="container">
         <a class="navbar-brand" href="index.php">
             <img src="" alt="Saldo Logo">
@@ -49,21 +49,21 @@ if(!empty($_POST["data"])) {
 <!-- Herunder kan du finde formularen til at tilføje ens indkomst. -->
 <div class="container mt-3">
     <form action="addMobileExpense.php" method="post">
-        <div class="row g-3">
-            <div class="col-12 col-md-4">
-                <label for="exAmount" class="form-label">Pris</label>
+        <div class="row g-3 justify-content-center">
+            <div class="col-10 col-md-7">
+                <label for="exAmount" class="form-label text-secondary fw-bold">Pris:</label>
                 <input type="number" step="0.01" class="form-control" id="exAmount" name="data[exAmount]" placeholder="Skriv prisen på abonnementet her" value="">
             </div>
-            <div class="col-12 col-md-4">
-                <label for="exName" class="form-label">Abonnement</label>
+            <div class="col-10 col-md-7">
+                <label for="exName" class="form-label text-secondary fw-bold mt-md-3">Abonnement:</label>
                 <input type="text" class="form-control" id="exName" name="data[exName]" placeholder="F.eks. Telia eller mobilabonnement" value="">
             </div>
-            <div class="col-12 col-md-4">
-                <label for="exDate" class="form-label">Vælg Dato</label>
+            <div class="col-10 col-md-7 mb-3">
+                <label for="exDate" class="form-label text-secondary fw-bold mt-md-3">Vælg Dato:</label>
                 <input type="date" class="form-control" id="exDate" name="data[exDate]" placeholder="Vælg Dato" value="">
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Tilføj abonnement</button>
+            <div class="col-12 d-flex justify-content-center">
+                <button type="submit" class="btn btn-knapfarve text-secondary fw-bold">Tilføj abonnement</button>
             </div>
         </div>
     </form>

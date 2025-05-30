@@ -44,7 +44,7 @@ require "settings/init.php";
         <div class="col-9 col-md-3 mx-auto">
             <!-- Indkomst og Udgifter-boks -->
             <div class="card bg-light mb-3 mx-auto">
-                <div class="card-header fw-bold">Indkomst:</div>
+                <div class="card-header fw-bold fs-5 text-secondary">Indkomst:</div>
                 <div class="card-body">
                     <p class="fs-1 fw-bold mb-0 text-center text-success"><?php echo $income; ?>,- DKK</p>
                 </div>

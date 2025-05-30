@@ -35,10 +35,10 @@ if(!empty($_POST["data"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="bg-primary">
 
 <!-- Her har du en navbar. Det er det, som viser logoet oppe i højre -->
-<nav class="navbar bg-body-tertiary">
+<nav class="navbar">
     <div class="container">
         <a class="navbar-brand" href="index.php">
             <img src="" alt="Saldo Logo">
@@ -47,23 +47,23 @@ if(!empty($_POST["data"])) {
 </nav>
 
 <!-- Herunder kan du finde formularen til at tilføje ens indkomst. -->
-<div class="container mt-3">
+<div class="container mt-4">
     <form action="addIncome.php" method="post">
-        <div class="row g-3">
-            <div class="col-12 col-md-4">
-                <label for="inAmount" class="form-label">Indkomst</label>
+        <div class="row g-3 justify-content-center">
+            <div class="col-10 col-md-7">
+                <label for="inAmount" class="form-label text-secondary fw-bold">Indkomst:</label>
                 <input type="number" step="0.01" class="form-control" id="inAmount" name="data[inAmount]" placeholder="Indkomst" value="">
             </div>
-            <div class="col-12 col-md-4">
-                <label for="inName" class="form-label">Indkomst navn</label>
+            <div class="col-10 col-md-7 mt-3">
+                <label for="inName" class="form-label text-secondary fw-bold">Navn:</label>
                 <input type="text" class="form-control" id="inName" name="data[inName]" placeholder="F.eks. løn, SU eller andet" value="">
             </div>
-            <div class="col-12 col-md-4">
-                <label for="inDate" class="form-label">Vælg Dato</label>
+            <div class="col-10 col-md-7 mt-3">
+                <label for="inDate" class="form-label text-secondary fw-bold">Vælg Dato</label>
                 <input type="date" class="form-control" id="inDate" name="data[inDate]" placeholder="Vælg Dato" value="">
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Tilføj Indkomst</button>
+            <div class="col-12 d-flex justify-content-center mt-4">
+                <button type="submit" class="btn btn-knapfarve text-secondary fw-bold">Tilføj Indkomst</button>
             </div>
         </div>
     </form>
