@@ -1,21 +1,22 @@
 <?php
 /** @var PDO $db */
 require "settings/init.php";
-$exId = $_GET["exId"];
+$inId = $_GET["inId"];
 
-if(empty($_GET["exId"])) {
-    header("Location: expenseList.php");
+if(empty($inId)) {
+    header("Location: incomeList.php");
+    exit;
 }
 
-$sql = "DELETE FROM expenses WHERE exId = :exId";
-$db->sql($sql, [":exId" => $exId]);
+$sql = "DELETE FROM income WHERE inId = :inId";
+$db->sql($sql, [":inId" => $inId]);
 ?>
 
 <!DOCTYPE html>
 <html lang="da">
 <head>
     <meta charset="utf-8">
-    <title>Fjern Udgift / Saldo</title>
+    <title>Forside / Saldo</title>
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
@@ -38,8 +39,8 @@ $db->sql($sql, [":exId" => $exId]);
 <div class="container text-center mt-3">
     <div class="row justify-content-center">
         <div class="col-10 col-md-5 bg-white rounded p-4 shadow">
-            <h3 class="text-success fw-bold mb-3">✅ Udgiften er nu slettet</h3>
-            <a href="expenseList.php" class="btn btn-knapfarve fw-bold mt-3">Tilbage til oversigten</a>
+            <h3 class="text-success fw-bold mb-3">✅ Indkomsten er nu slettet</h3>
+            <a href="incomeList.php" class="btn btn-knapfarve fw-bold mt-3">Tilbage til oversigten</a>
         </div>
     </div>
 </div>

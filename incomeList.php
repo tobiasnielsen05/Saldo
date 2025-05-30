@@ -12,7 +12,7 @@ $income = $db->sql("SELECT * FROM income ORDER BY inDate DESC");
 <html lang="da">
 <head>
     <meta charset="utf-8">
-    <title>Udgift Liste / Saldo</title>
+    <title>Indkomst Liste / Saldo</title>
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
@@ -61,7 +61,7 @@ $income = $db->sql("SELECT * FROM income ORDER BY inDate DESC");
                                 </a>
                             </td>
                             <td class="text-center fs-3">
-                                <a href="expenseDelete.php?exId=<?php echo $in->inId; ?>" class="text-danger">
+                                <a href="incomeDelete.php?inId=<?php echo $in->inId; ?>" class="text-danger">
                                     <i class="bi bi-trash-fill"></i>
                                 </a>
                             </td>

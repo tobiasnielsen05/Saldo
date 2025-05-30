@@ -59,7 +59,7 @@ require "settings/init.php";
             <a class="btn btn-knapfarve text-secondary fw-bold" href="addIncome.php" role="button">Tilføj Indkomst</a>
         </div>
         <div class="col-12 col-md-6 mt-3 mt-md-4 d-flex justify-content-md-start justify-content-center">
-            <a class="btn btn-knapfarve text-secondary fw-bold" href="#" role="button">Ret Indkomst</a>
+            <a class="btn btn-knapfarve text-secondary fw-bold" href="incomeList.php" role="button">Ret Indkomst</a>
         </div>
     </div>
 </div>
