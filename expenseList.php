@@ -72,8 +72,8 @@ $expenses = $db->sql("SELECT * FROM expenses LEFT JOIN expense_types ON exName =
                 </table>
             </div>
         </div>
-        <div class="col-12 text-center mt-5">
-            <a class="btn btn-knapfarve text-secondary fw-bold p-2" href="index.php">Gå tilbage</a>
+        <div class="col-12 text-center mt-5 mb-4">
+            <a class="btn btn-knapfarve text-secondary fw-bold p-2" href="budgetOverview.php">Gå tilbage</a>
         </div>
     </div>
 </div>

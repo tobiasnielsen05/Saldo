@@ -73,7 +73,7 @@ $income = $db->sql("SELECT * FROM income ORDER BY inDate DESC");
             </div>
         </div>
         <div class="col-12 text-center mt-5">
-            <a class="btn btn-knapfarve text-secondary fw-bold p-2" href="index.php">Gå tilbage</a>
+            <a class="btn btn-knapfarve text-secondary fw-bold p-2" href="budgetOverview.php">Gå tilbage</a>
         </div>
     </div>
 </div>

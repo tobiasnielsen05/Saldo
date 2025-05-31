@@ -64,6 +64,9 @@ if(!empty($_POST["data"])) {
             <div class="col-12 d-flex justify-content-center mt-4">
                 <button type="submit" class="btn btn-knapfarve text-secondary fw-bold">Tilføj udgift</button>
             </div>
+            <div class="col-12 text-center mt-5 mb-4">
+                <a class="btn btn-knapfarve text-secondary fw-bold p-2" href="budgetOverview.php">Gå tilbage</a>
+            </div>
         </div>
     </form>
 </div>

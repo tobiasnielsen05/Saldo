@@ -126,6 +126,10 @@ require "settings/init.php";
             <a class="btn btn-knapfarve text-secondary fw-bold p-2" href="expenseList.php">Vis alle udgifter</a>
         </div>
 
+        <div class="col-12 text-center mt-5 mb-4">
+            <a class="btn btn-knapfarve text-secondary fw-bold p-2" href="index.php">Vis til rådighed</a>
+        </div>
+
     </div>
 </div>
 

@@ -41,8 +41,8 @@ $income = $income[0];
 <!-- Navbar -->
 <nav class="navbar">
     <div class="container d-flex justify-content-center">
-        <a class="navbar" href="index.php">
-            <img class="w-100 img-fluid" src="images/saldologo150x150.webp" alt="Saldo Logo">
+        <a class="navbar d-flex justify-content-center" href="index.php">
+            <img class="w-75 img-fluid" src="images/saldologo150x150.webp" alt="Saldo Logo">
         </a>
     </div>
 </nav>
@@ -71,6 +71,9 @@ $income = $income[0];
         </div>
         <div class="col-12 text-center mt-5">
             <button type="submit" class="btn btn-knapfarve text-secondary fw-bold">Opdater</button>
+        </div>
+        <div class="col-12 text-center mt-5 mb-4">
+            <a class="btn btn-knapfarve text-secondary fw-bold p-2" href="incomeList.php">Gå tilbage</a>
         </div>
         <input type="hidden" name="inId" value="<?php echo $income->inId ?>">
     </form>
