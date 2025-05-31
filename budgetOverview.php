@@ -30,7 +30,7 @@ require "settings/init.php";
 
 <!-- Indkomst-sektion -->
 <div class="container mt-4">
-    <div class="row g-2">
+    <div class="row g-2 justify-content-center">
 
         <?php
         // Hent den samlede indkomst fra databasen
@@ -41,12 +41,12 @@ require "settings/init.php";
         $income = number_format($inAmount, 0, ',', '.');
         ?>
 
-        <div class="col-9 col-md-3 mx-auto">
+        <div class="col-9 col-md-3">
             <!-- Indkomst og Udgifter-boks -->
-            <div class="card bg-light mb-3 mx-auto">
-                <div class="card-header fw-bold fs-5 text-secondary">Indkomst:</div>
+            <div class="card bg-light mb-2 mx-auto">
+                <div class="card-header fw-bold text-secondary">Indkomst:</div>
                 <div class="card-body">
-                    <p class="fs-1 fw-bold mb-0 text-center text-success"><?php echo $income; ?>,- DKK</p>
+                    <p class="fs-3 fw-bold mb-0 text-center text-success"><?php echo $income; ?>,- DKK</p>
                 </div>
             </div>
         </div>
@@ -55,10 +55,10 @@ require "settings/init.php";
 
 <div class="container">
     <div class="row">
-        <div class="col-12 col-md-6 mt-md-4 d-flex justify-content-md-end justify-content-center">
+        <div class="col-12 col-md-6 mt-3 mt-md-3 d-flex justify-content-md-end justify-content-center">
             <a class="btn btn-knapfarve text-secondary fw-bold" href="addIncome.php" role="button">Tilføj Indkomst</a>
         </div>
-        <div class="col-12 col-md-6 mt-3 mt-md-4 d-flex justify-content-md-start justify-content-center">
+        <div class="col-12 col-md-6 mt-3 mt-md-3 d-flex justify-content-md-start justify-content-center">
             <a class="btn btn-knapfarve text-secondary fw-bold" href="incomeList.php" role="button">Ret Indkomst</a>
         </div>
     </div>
@@ -66,7 +66,7 @@ require "settings/init.php";
 
 <!-- Udgifter-sektion -->
 <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-12 mt-5 d-flex justify-content-center">
             <h1 class="text-secondary fw-bold">Udgifter:</h1>
         </div>

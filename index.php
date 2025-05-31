@@ -55,7 +55,7 @@ if ($available > 1000) {
 
 <div class="container mt-4">
     <div class="row justify-content-center">
-        <div class="col-9 col-md-3">
+        <div class="col-10 col-md-3">
             <!-- Til rådighed-boks -->
             <div class="card text-white <?php echo $cardClass; ?> mb-4 mx-auto">
                 <div class="card-header fw-bold">Til rådighed: <?php echo $statusText; ?></div>
@@ -69,7 +69,7 @@ if ($available > 1000) {
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-9 col-md-3">
+        <div class="col-10 col-md-3">
             <!-- Indkomst og Udgifter-boks -->
             <div class="card bg-light mb-3 mx-auto">
                 <div class="card-header text-secondary fw-bold">Detaljer:</div>
