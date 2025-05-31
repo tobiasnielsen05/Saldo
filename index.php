@@ -4,6 +4,31 @@
  */
 
 require "settings/init.php";
+
+
+// Beregn indkomst og udgifter
+$incomeTotal = $db->sql("SELECT SUM(inAmount) AS total FROM income")[0]->total ?? 0;
+$expenseTotal = $db->sql("SELECT SUM(exAmount) AS total FROM expenses")[0]->total ?? 0;
+$available = $incomeTotal - $expenseTotal;
+
+// Farve og tekst baseret på beløb
+if ($available > 1000) {
+    $cardClass = "bg-success";
+    $statusText = "💰 God økonomi";
+    $statusIcon = "💰";
+} else if ($available >= 500) {
+    $cardClass = "bg-warning";
+    $statusText = "⚠️ Vær opmærksom";
+    $statusIcon = "⚠️";
+} else if ($available > 0) {
+    $cardClass = "bg-danger";
+    $statusText = "🚨 Overforbrug!";
+    $statusIcon = "🚨";
+} else if ($available == 0) {
+    $cardClass = "bg-dark opacity-75";
+    $statusText = "";
+    $statusIcon = "";
+}
 ?>
 <!DOCTYPE html>
 <html lang="da">
@@ -27,32 +52,6 @@ require "settings/init.php";
         </a>
     </div>
 </nav>
-
-<?php
-// Beregn indkomst og udgifter
-$incomeTotal = $db->sql("SELECT SUM(inAmount) AS total FROM income")[0]->total ?? 0;
-$expenseTotal = $db->sql("SELECT SUM(exAmount) AS total FROM expenses")[0]->total ?? 0;
-$available = $incomeTotal - $expenseTotal;
-
-// Farve og tekst baseret på beløb
-if ($available > 1000) {
-    $cardClass = "bg-success";
-    $statusText = "💰 God økonomi";
-    $statusIcon = "💰";
-} else if ($available >= 500) {
-    $cardClass = "bg-warning";
-    $statusText = "⚠️ Vær opmærksom";
-    $statusIcon = "⚠️";
-} else if($available > 0) {
-    $cardClass = "bg-danger";
-    $statusText = "🚨 Overforbrug!";
-    $statusIcon = "🚨";
-} else if($available == 0) {
-    $cardClass = "bg-dark opacity-75";
-    $statusText = "";
-    $statusIcon = "";
-}
-?>
 
 <div class="container mt-4">
     <div class="row justify-content-center">

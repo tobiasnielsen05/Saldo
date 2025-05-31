@@ -37,11 +37,11 @@ if(!empty($_POST["data"])) {
 
 <body class="bg-primary">
 
-<!-- Her har du en navbar. Det er det, som viser logoet oppe i højre -->
+<!-- Navbar -->
 <nav class="navbar">
-    <div class="container">
-        <a class="navbar-brand" href="index.php">
-            <img src="" alt="Saldo Logo">
+    <div class="container d-flex justify-content-center">
+        <a class="navbar d-flex justify-content-center" href="index.php">
+            <img class="w-75 img-fluid" src="images/saldologo150x150.webp" alt="Saldo Logo">
         </a>
     </div>
 </nav>
