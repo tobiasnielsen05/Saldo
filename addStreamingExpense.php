@@ -24,7 +24,7 @@ if(!empty($_POST["data"])) {
 <head>
     <meta charset="utf-8">
 
-    <title>Tilføj Indkomst / Saldo</title>
+    <title>Tilføj StreamingsTjeneste / Saldo</title>
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
