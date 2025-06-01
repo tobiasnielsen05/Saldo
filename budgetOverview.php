@@ -9,7 +9,7 @@ require "settings/init.php";
 <html lang="da">
 <head>
     <meta charset="utf-8">
-    <title>Forside / Saldo</title>
+    <title>Budget Oversigt / Saldo</title>
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
@@ -59,7 +59,7 @@ require "settings/init.php";
             <a class="btn btn-knapfarve text-secondary fw-bold" href="addIncome.php" role="button">Tilføj Indkomst</a>
         </div>
         <div class="col-12 col-md-6 mt-3 mt-md-3 d-flex justify-content-md-start justify-content-center">
-            <a class="btn btn-knapfarve text-secondary fw-bold" href="incomeList.php" role="button">Ret Indkomst</a>
+            <a class="btn btn-knapfarve text-secondary fw-bold" href="incomeList.php" role="button">Vis Indkomst(er)</a>
         </div>
     </div>
 </div>
