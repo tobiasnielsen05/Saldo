@@ -61,8 +61,8 @@ $income = $income[0];
                 <input type="number" step="0.01" class="form-control" id="inAmount" name="data[inAmount]" placeholder="Skriv prisen på indkomsten her" value="<?php echo $income->inAmount ?>">
             </div>
             <div class="col-10 col-md-7">
-                <label for="inName" class="form-label text-secondary fw-bold">Udgift:</label>
-                <input type="text" class="form-control" id="inName" name="data[inName]" placeholder="F.eks. forsikring, internet, fagforening osv." value="<?php echo $income->inName ?>">
+                <label for="inName" class="form-label text-secondary fw-bold">Indkomst:</label>
+                <input type="text" class="form-control" id="inName" name="data[inName]" placeholder="F.eks. løn, SU eller andet" value="<?php echo $income->inName ?>">
             </div>
             <div class="col-10 col-md-7">
                 <label for="inDate" class="form-label text-secondary fw-bold">Vælg Dato:</label>
