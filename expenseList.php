@@ -37,12 +37,11 @@ $expenses = $db->sql("SELECT * FROM expenses LEFT JOIN expense_types ON exName =
         <div class="col-auto">
             <h3 class="text-secondary fw-bold mb-3">Dine udgifter:</h3>
             <div class="table-responsive">
-                <table class="table table-bordered table-striped table-hover w-auto">
+                <table class="table table-bordered table-striped table-hover w-100">
                     <thead class="table-secondary">
                     <tr>
-                        <th class="text-nowrap">Udgift</th>
-                        <th class="text-nowrap">Beløb (kr)</th>
-                        <th class="text-nowrap">Dato</th>
+                        <th>Udgift</th>
+                        <th>Beløb (kr)</th>
                         <th>Ret</th>
                         <th>Slet</th>
                     </tr>
@@ -52,9 +51,8 @@ $expenses = $db->sql("SELECT * FROM expenses LEFT JOIN expense_types ON exName =
                     foreach ($expenses as $expense) {
                         ?>
                         <tr>
-                            <td><?php echo $expense->exName ?? 'Ukendt'; ?></td>
-                            <td class="text-nowrap"><?php echo number_format($expense->exAmount, 2, ',', '.'); ?>,-</td>
-                            <td class="text-nowrap"><?php echo date("d-m-Y", strtotime($expense->exDate)); ?></td>
+                            <td class="text-break"><?php echo $expense->exName ?? 'Ukendt'; ?></td>
+                            <td><?php echo number_format($expense->exAmount, 2, ',', '.'); ?>,-</td>
                             <td class="text-center">
                                 <a href="expenseUpdate.php?exId=<?php echo $expense->exId; ?>" class="text-warning fs-3">
                                     <i class="bi bi-pencil-square"></i>

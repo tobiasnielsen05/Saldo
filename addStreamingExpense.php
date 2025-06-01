@@ -8,12 +8,12 @@ require "settings/init.php";
 if(!empty($_POST["data"])) {
     $data = $_POST["data"];
 
-    $sql = "INSERT INTO expenses (exAmount, exName, exDate) VALUES(:exAmount, :exName, :exDate)";
-    $bind = [":exAmount" => $data["exAmount"], ":exName" => $data["exName"], ":exDate" => $data["exDate"]];
+    $sql = "INSERT INTO expenses (exAmount, exName) VALUES(:exAmount, :exName)";
+    $bind = [":exAmount" => $data["exAmount"], ":exName" => $data["exName"]];
 
     $db->sql($sql, $bind, false);
 
-    echo "Streamingtjenesten er nu tilføjet. <a href='addStreamingExpense.php'>Tilføj en anden streamingtjeneste</a> Eller <a href='budgetOverview.php'>Gå tilbage</a>";
+    header("Location: expenseList.php");
     exit;
 
 }
@@ -71,12 +71,6 @@ if(!empty($_POST["data"])) {
             <div class="col-10 col-md-7">
                 <label for="exAmount" class="text-secondary fw-bold mb-1 mt-3">Beløb (kr):</label>
                 <input type="number" name="data[exAmount]" id="exAmount" class="form-control">
-            </div>
-
-            <!-- Dato -->
-            <div class="col-10 col-md-7">
-                <label for="exDate" class="form-label text-secondary fw-bold mb-1 mt-3">Vælg Dato</label>
-                <input type="date" class="form-control" id="exDate" name="data[exDate]" placeholder="" value="">
             </div>
         </form>
 

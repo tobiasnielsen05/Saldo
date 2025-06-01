@@ -37,12 +37,11 @@ $income = $db->sql("SELECT * FROM income ORDER BY inDate DESC");
         <div class="col-auto">
             <h3 class="text-secondary fw-bold mb-3">Dine indkomster:</h3>
             <div class="table-responsive">
-                <table class="table table-bordered table-striped table-hover w-auto">
+                <table class="table table-bordered table-striped table-hover 100">
                     <thead class="table-secondary">
                     <tr>
-                        <th class="text-nowrap">Udgift</th>
-                        <th class="text-nowrap">Beløb (kr)</th>
-                        <th class="text-nowrap">Dato</th>
+                        <th>Udgift</th>
+                        <th>Beløb (kr)</th>
                         <th>Ret</th>
                         <th>Slet</th>
                     </tr>
@@ -52,9 +51,8 @@ $income = $db->sql("SELECT * FROM income ORDER BY inDate DESC");
                     foreach ($income as $in) {
                         ?>
                         <tr>
-                            <td><?php echo $in->inName ?? 'Ukendt'; ?></td>
-                            <td class="text-nowrap"><?php echo number_format($in->inAmount, 2, ',', '.'); ?>,-</td>
-                            <td class="text-nowrap"><?php echo date("d-m-Y", strtotime($in->inDate)); ?></td>
+                            <td class="text-break"><?php echo $in->inName ?? 'Ukendt'; ?></td>
+                            <td ><?php echo number_format($in->inAmount, 2, ',', '.'); ?>,-</td>
                             <td class="text-center">
                                 <a href="incomeUpdate.php?inId=<?php echo $in->inId; ?>" class="text-warning fs-3">
                                     <i class="bi bi-pencil-square"></i>

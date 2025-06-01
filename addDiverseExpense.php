@@ -8,12 +8,12 @@ require "settings/init.php";
 if(!empty($_POST["data"])) {
     $data = $_POST["data"];
 
-    $sql = "INSERT INTO expenses (exAmount, exName, exDate) VALUES(:exAmount, :exName, :exDate)";
-    $bind = [":exAmount" => $data["exAmount"], ":exName" => $data["exName"], ":exDate" => $data["exDate"]];
+    $sql = "INSERT INTO expenses (exAmount, exName) VALUES(:exAmount, :exName)";
+    $bind = [":exAmount" => $data["exAmount"], ":exName" => $data["exName"]];
 
     $db->sql($sql, $bind, false);
 
-    echo "Udgiften er nu tilføjet. <a href='addDiverseExpense.php'>Tilføj en anden udgift</a> Eller <a href='budgetOverview.php'>Gå tilbage til forsiden</a> ";
+    header("Location: expenseList.php");
     exit;
 }
 ?>
@@ -56,10 +56,6 @@ if(!empty($_POST["data"])) {
             <div class="col-10 col-md-7">
                 <label for="exName" class="form-label text-secondary fw-bold">Udgift:</label>
                 <input type="text" class="form-control" id="exName" name="data[exName]" placeholder="F.eks. forsikring, internet, fagforening osv." value="">
-            </div>
-            <div class="col-10 col-md-7">
-                <label for="exDate" class="form-label text-secondary fw-bold">Vælg Dato:</label>
-                <input type="date" class="form-control" id="exDate" name="data[exDate]" placeholder="Vælg Dato" value="">
             </div>
             <div class="col-12 d-flex justify-content-center mt-4">
                 <button type="submit" class="btn btn-knapfarve text-secondary fw-bold">Tilføj udgift</button>

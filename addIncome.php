@@ -58,10 +58,6 @@ if(!empty($_POST["data"])) {
                 <label for="inName" class="form-label text-secondary fw-bold">Navn:</label>
                 <input type="text" class="form-control" id="inName" name="data[inName]" placeholder="F.eks. løn, SU eller andet" value="">
             </div>
-            <div class="col-10 col-md-7 mt-3">
-                <label for="inDate" class="form-label text-secondary fw-bold">Vælg Dato</label>
-                <input type="date" class="form-control" id="inDate" name="data[inDate]" placeholder="Vælg Dato" value="">
-            </div>
             <div class="col-12 d-flex justify-content-center mt-4">
                 <button type="submit" class="btn btn-knapfarve text-secondary fw-bold">Tilføj Indkomst</button>
             </div>
